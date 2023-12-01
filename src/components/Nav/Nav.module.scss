@@ -1,0 +1,42 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	background: linear-gradient(rgba(177, 177, 177, 80%) 0%, rgba(217, 217, 217, 0) 90%);
+	& ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	& .logo {
+		width: 300px;
+		max-height: 175px;
+	}
+	& .links {
+		font-size: 3rem;
+		gap: 3rem;
+		letter-spacing: 1px;
+		& a {
+			transition: transform 0.1s ease-in-out;
+			display: inline-block;
+		}
+		& a:hover {
+			transform: scale(1.1);
+		}
+	}
+	& .icons {
+		gap: 2rem;
+	}
+}
+
+.icon {
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.1s ease-in-out;
+	cursor: pointer;
+	filter: brightness(0%) grayscale(100%);
+	&:hover {
+		transform: scale(1.2);
+	}
+}

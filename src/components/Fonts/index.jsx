@@ -1,0 +1,1 @@
+export { londrina } from './Fonts';
