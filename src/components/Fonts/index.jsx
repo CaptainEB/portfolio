@@ -1,1 +1,1 @@
-export { londrina } from './Fonts';
+export { londrina, majorMono } from './Fonts';
