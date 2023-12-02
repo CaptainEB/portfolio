@@ -37,3 +37,28 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.notableSkills {
+	display: flex;
+	gap: 1rem;
+	margin-inline: 3rem;
+	margin-top: 5rem;
+	height: 7rem;
+	position: relative;
+	padding: 1rem 25%;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 10%;
+		width: 80%;
+		height: 2px;
+		background-color: black;
+	}
+
+	& img {
+		flex: 1;
+		height: 100%;
+		object-fit: contain;
+	}
+}
