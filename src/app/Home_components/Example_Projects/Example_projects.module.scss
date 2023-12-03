@@ -1,0 +1,23 @@
+.exampleProjects {
+	margin-top: 3rem;
+
+	& h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+}
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 2rem;
+	gap: 2rem;
+
+	& img {
+		width: clamp(500px, 90%, 700px);
+		height: 100%;
+		object-fit: cover;
+	}
+}

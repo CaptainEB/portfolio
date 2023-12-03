@@ -7,6 +7,8 @@ import mongoIcon from 'public/icons/mongo.svg';
 import nextIcon from 'public/icons/nextjs.svg';
 import reactIcon from 'public/icons/react-icon.png';
 import heroImage from 'public/img/hero-image-1x1.jpg';
+import Example_Projects from './Home_components/Example_Projects';
+import HomeSkills from './Home_components/HomeSkills';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -18,7 +20,9 @@ export default function Home() {
 				</div>
 				<div className={`${styles.heroText} ${majorMono.className}`}>
 					<h1 className={londrina.className}>SAM</h1>
-					<h2>Developer | Engineer</h2>
+					<h2>
+						Developer <span> |</span> Engineer
+					</h2>
 					<h2>FullStack</h2>
 				</div>
 			</section>
@@ -30,6 +34,8 @@ export default function Home() {
 				<Image src={cssIcon} alt="CSS Icon" />
 				<Image src={htmlIcon} alt="HTML Icon" />
 			</section>
+			<HomeSkills />
+			<Example_Projects />
 		</main>
 	);
 }
