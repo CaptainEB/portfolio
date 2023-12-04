@@ -1,7 +1,7 @@
 import { majorMono } from '@/components/Fonts';
 import Image from 'next/image';
-import project1 from 'public/img/project1.png';
-import project2 from 'public/img/project2.png';
+import project2 from 'public/img/binge.png';
+import project1 from 'public/img/taco-tap.png';
 import styles from './Example_projects.module.scss';
 
 export default function Example_projects() {
