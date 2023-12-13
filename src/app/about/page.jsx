@@ -3,7 +3,7 @@ import styles from './page.module.scss';
 
 export default function page() {
 	return (
-		<main className={styles.main}>
+		<section>
 			<p className={`${montserrat.className} ${styles.p} ${styles.intro}`}>
 				On this page, I aim to provide insights into my past professional experiences and meticulously detail the tech stack employed in constructing
 				this website.
@@ -37,6 +37,6 @@ export default function page() {
 					and separates my styles from my functional code.
 				</p>
 			</div>
-		</main>
+		</section>
 	);
 }

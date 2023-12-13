@@ -20,7 +20,7 @@ import styles from './page.module.scss';
 
 export default function page() {
 	return (
-		<main className={styles.main}>
+		<section>
 			<section className={styles.barGraph}>
 				<div className={styles.titles}>
 					<h3 className={majorMono.className}>Developer</h3>
@@ -81,6 +81,6 @@ export default function page() {
 					</div>
 				</section>
 			</div>
-		</main>
+		</section>
 	);
 }

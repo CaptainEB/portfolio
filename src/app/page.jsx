@@ -13,7 +13,7 @@ import styles from './page.module.scss';
 
 export default function Home() {
 	return (
-		<main className={styles.main}>
+		<section>
 			<section className={styles.hero}>
 				<div className={styles.flexCenter}>
 					<Image className={styles.heroImage} src={heroImage} alt="Hero Image" />
@@ -36,6 +36,6 @@ export default function Home() {
 			</section>
 			<HomeSkills />
 			<Example_Projects />
-		</main>
+		</section>
 	);
 }

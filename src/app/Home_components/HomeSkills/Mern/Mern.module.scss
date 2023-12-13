@@ -1,0 +1,46 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(3, 7rem);
+	grid-template-rows: repeat(3, 7rem);
+	gap: 1rem;
+	place-items: center;
+	& * {
+		padding: 0.25em;
+		margin: 0;
+	}
+}
+
+.outerContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mernTextWrapper {
+	font-size: 1.5rem;
+	grid-column: 2;
+	grid-row: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.react {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.mongo {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.node {
+	grid-column: 3;
+	grid-row: 2;
+}
+
+.express {
+	grid-column: 2;
+	grid-row: 3;
+}

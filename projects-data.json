@@ -1,19 +1,19 @@
 {
-	"project1": {
+	"tacoTap": {
 		"title": "Taco Tap",
 		"shortDescription": "A completely front end website that uses google and weather api's to find the best taco place near you.",
 		"githubUrl": "https://github.com/CaptainEB/Taco-Tap",
 		"liveUrl": "https://captaineb.github.io/Taco-Tap/",
-		"image": "public/img/taco-tap.png",
-		"tech": ["HTML/CSS", "Javascript", "jQuery", "Google Maps API", "Open Weather API", "tailwind.css"]
+		"image": "/img/taco-tap.png",
+		"tech": ["jQuery", "Google Maps API", "tailwind.css"]
 	},
-	"project2": {
+	"binge": {
 		"title": "Binge",
 		"shortDescription": "This is a full stack application that allows users to add their favorite tv shows, movies and music to their profile. The data is saved in a mysql database and the user can update their entries.",
 		"githubUrl": "https://github.com/tdavids215/Binge",
 		"liveUrl": "https://floating-spire-24102-defdd03b0620.herokuapp.com/",
-		"image": "public/img/binge.png",
-		"tech": ["Handlebars.js", "jQuery", "Node.js", "Express.js", "MySQL", "Sequelize"]
+		"image": "/img/binge.png",
+		"tech": ["Handlebars.js", "Express.js", "MySQL"]
 	},
 	"project3": {},
 	"project4": {}

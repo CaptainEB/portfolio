@@ -1,5 +1,6 @@
 import { majorMono } from '@/components/Fonts';
 import styles from './HomeSkills.module.scss';
+import Mern from './Mern';
 
 export default function HomeSkills() {
 	return (
@@ -21,7 +22,7 @@ export default function HomeSkills() {
 					<span className={majorMono.className}>82</span>
 				</div>
 			</div>
-			<div className={styles.animation}>ANIMATION</div>
+			<Mern />
 		</section>
 	);
 }
