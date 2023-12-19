@@ -14,29 +14,36 @@ export default function Nav() {
 					<Image className={styles.logo} src={logo} alt="logo" />
 				</Link>
 			</div>
-			<ul className={styles.links}>
-				<li>
-					<Link href="/projects">Projects</Link>
-				</li>
-				<li>
-					<Link href="/skills">Skills</Link>
-				</li>
-				<li>
-					<Link href="/about">About</Link>
-				</li>
-			</ul>
-			<ul className={styles.icons}>
-				<li>
-					<Link href="https://github.com/CaptainEB">
-						<Image className={styles.icon} src={githubIcon} alt="github icon" width={50} height={50} />
-					</Link>
-				</li>
-				<li>
-					<Link href="https://www.linkedin.com/in/sam-ebadi-sobi-543a14161/">
-						<Image className={styles.icon} src={linkedinIcon} alt="linkedin icon" width={50} height={50} />
-					</Link>
-				</li>
-			</ul>
+			<div className={styles.navigation}>
+				<ul className={styles.links}>
+					<li className={styles.row1}>
+						<Link href="/projects">Projects</Link>
+					</li>
+					<li className={styles.row2}>
+						<Link href="/skills">Skills</Link>
+					</li>
+					<li className={styles.row3}>
+						<Link href="/about">About</Link>
+					</li>
+				</ul>
+				<ul className={styles.icons}>
+					<li className={styles.row4}>
+						<Link href="https://github.com/CaptainEB">
+							<Image className={styles.icon} src={githubIcon} alt="github icon" width={50} height={50} />
+						</Link>
+					</li>
+					<li className={styles.row5}>
+						<Link href="https://www.linkedin.com/in/sam-ebadi-sobi-543a14161/">
+							<Image className={styles.icon} src={linkedinIcon} alt="linkedin icon" width={50} height={50} />
+						</Link>
+					</li>
+				</ul>
+			</div>
+			<button className={styles.navBtn}>
+				<div className={styles.navBtn1}></div>
+				<div className={styles.navBtn2}></div>
+				<div className={styles.navBtn3}></div>
+			</button>
 		</nav>
 	);
 }
