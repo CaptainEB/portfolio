@@ -1,12 +1,20 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import githubIcon from 'public/icons/github-mark.png';
 import linkedinIcon from 'public/icons/linkedin.png';
 import logo from 'public/logo.svg';
+import { useRef } from 'react';
 import { londrina } from '../Fonts';
 import styles from './Nav.module.scss';
 
 export default function Nav() {
+	const smallNav = useRef(null);
+
+	function showNav() {
+		smallNav.current.classList.toggle(styles.showNav);
+	}
+
 	return (
 		<nav className={`${styles.nav} ${londrina.className}`}>
 			<div className={styles.logo}>
@@ -14,7 +22,7 @@ export default function Nav() {
 					<Image className={styles.logo} src={logo} alt="logo" />
 				</Link>
 			</div>
-			<div className={styles.navigation}>
+			<div className={styles.navigation} ref={smallNav}>
 				<ul className={styles.links}>
 					<li className={styles.row1}>
 						<Link href="/projects">Projects</Link>
@@ -39,7 +47,7 @@ export default function Nav() {
 					</li>
 				</ul>
 			</div>
-			<button className={styles.navBtn}>
+			<button className={styles.navBtn} onClick={showNav}>
 				<div className={styles.navBtn1}></div>
 				<div className={styles.navBtn2}></div>
 				<div className={styles.navBtn3}></div>
