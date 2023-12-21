@@ -1,5 +1,5 @@
 $icon-size: clamp(2.5rem, 3vw, 10rem);
-$medium: 768px;
+$medium: 850px;
 
 @mixin mq($size) {
 	@media (max-width: $size) {
@@ -51,6 +51,7 @@ $medium: 768px;
 		}
 		@include mq($medium) {
 			flex-direction: column;
+			font-size: min(6vw, 2rem);
 		}
 	}
 	.icons {
@@ -76,31 +77,34 @@ $medium: 768px;
 }
 
 .navigation {
-	transition: all 0.5s ease-out;
-	width: 65%;
+	transition: all 300ms ease-out;
+	width: 60%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 100;
 	@include mq($medium) {
 		flex-direction: column;
 		gap: 2rem;
 		position: fixed;
 		padding-top: 5rem;
 		width: auto;
-		inset: 0 0 0 75%;
+		inset: 0 0 0 70%;
 		justify-content: flex-start;
 		transform: translateX(150%);
-		background-color: rgba(255, 255, 255, 0.7);
+		background: rgba(255, 255, 255, 0.9);
+		border-radius: 0.25em;
+		-webkit-box-shadow: -10px 0px 26px -15px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: -10px 0px 26px -15px rgba(0, 0, 0, 0.75);
+		box-shadow: -10px 0px 26px -15px rgba(0, 0, 0, 0.75);
 	}
 }
 
-// @for $i from 1 through 5 {
-// 	.row#{$i} {
-// 		@include mq($medium) {
-// 			animation-delay: $i * 0.1s;
-// 		}
-// 	}
-// }
+.row2 {
+	@include mq($medium) {
+		transition-delay: 1s;
+	}
+}
 
 .navBtn {
 	background-color: transparent;
@@ -111,9 +115,9 @@ $medium: 768px;
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: column;
-		position: absolute;
+		position: fixed;
 		top: 2%;
-		right: 2%;
+		right: 5%;
 		width: 2rem;
 		height: 2rem;
 		z-index: 1000;

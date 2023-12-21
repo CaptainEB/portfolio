@@ -27,8 +27,10 @@ export default function Nav() {
 					<li className={styles.row1}>
 						<Link href="/projects">Projects</Link>
 					</li>
-					<li className={styles.row2}>
-						<Link href="/skills">Skills</Link>
+					<li>
+						<Link className={styles.row2} href="/skills">
+							Skills
+						</Link>
 					</li>
 					<li className={styles.row3}>
 						<Link href="/about">About</Link>
