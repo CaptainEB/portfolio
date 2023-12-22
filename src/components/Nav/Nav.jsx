@@ -10,9 +10,16 @@ import styles from './Nav.module.scss';
 
 export default function Nav() {
 	const smallNav = useRef(null);
+	const navbtn = useRef(null);
 
 	function showNav() {
-		smallNav.current.classList.toggle(styles.showNav);
+		const openNav = smallNav.current.getAttribute('aria-expanded');
+		if (openNav === 'true') smallNav.current.setAttribute('aria-expanded', 'false');
+		else smallNav.current.setAttribute('aria-expanded', 'true');
+
+		const openBtn = navbtn.current.getAttribute('aria-expanded');
+		if (openBtn === 'true') navbtn.current.setAttribute('aria-expanded', 'false');
+		else navbtn.current.setAttribute('aria-expanded', 'true');
 	}
 
 	return (
@@ -22,15 +29,13 @@ export default function Nav() {
 					<Image className={styles.logo} src={logo} alt="logo" />
 				</Link>
 			</div>
-			<div className={styles.navigation} ref={smallNav}>
+			<div className={styles.navigation} ref={smallNav} aria-expanded="false">
 				<ul className={styles.links}>
 					<li className={styles.row1}>
 						<Link href="/projects">Projects</Link>
 					</li>
-					<li>
-						<Link className={styles.row2} href="/skills">
-							Skills
-						</Link>
+					<li className={styles.row2}>
+						<Link href="/skills">Skills</Link>
 					</li>
 					<li className={styles.row3}>
 						<Link href="/about">About</Link>
@@ -49,10 +54,10 @@ export default function Nav() {
 					</li>
 				</ul>
 			</div>
-			<button className={styles.navBtn} onClick={showNav}>
-				<div className={styles.navBtn1}></div>
-				<div className={styles.navBtn2}></div>
-				<div className={styles.navBtn3}></div>
+			<button className={styles.navBtn} onClick={showNav} ref={navbtn} aria-expanded="false">
+				<div className={styles.top}></div>
+				<div className={styles.middle}></div>
+				<div className={styles.bottom}></div>
 			</button>
 		</nav>
 	);

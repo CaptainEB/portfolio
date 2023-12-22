@@ -20,6 +20,10 @@ $medium: 850px;
 	.logo {
 		width: clamp(10rem, 15vw, 25rem);
 		max-height: 175px;
+		@include mq($medium) {
+			width: clamp(7rem, 20vw, 20rem);
+			max-height: clamp(7rem, 20vw, 20rem);
+		}
 	}
 	.links {
 		font-size: clamp(2rem, 3vw, 3.5rem);
@@ -85,9 +89,9 @@ $medium: 850px;
 	z-index: 100;
 	@include mq($medium) {
 		flex-direction: column;
-		gap: 2rem;
+		gap: 4rem;
 		position: fixed;
-		padding-top: 5rem;
+		padding-top: 7rem;
 		width: auto;
 		inset: 0 0 0 70%;
 		justify-content: flex-start;
@@ -97,6 +101,9 @@ $medium: 850px;
 		-webkit-box-shadow: -10px 0px 26px -15px rgba(0, 0, 0, 0.75);
 		-moz-box-shadow: -10px 0px 26px -15px rgba(0, 0, 0, 0.75);
 		box-shadow: -10px 0px 26px -15px rgba(0, 0, 0, 0.75);
+	}
+	&[aria-expanded='true'] {
+		transform: translateX(0%);
 	}
 }
 
@@ -116,7 +123,7 @@ $medium: 850px;
 		align-items: center;
 		flex-direction: column;
 		position: fixed;
-		top: 2%;
+		top: 5%;
 		right: 5%;
 		width: 2rem;
 		height: 2rem;
@@ -128,8 +135,29 @@ $medium: 850px;
 			border-radius: 0.25rem;
 		}
 	}
-}
 
-.showNav {
-	transform: translateX(0%);
+	.top,
+	.bottom {
+		transition: transform 300ms ease-out 300ms, rotate 300ms ease-out;
+		transform-origin: center;
+	}
+
+	.middle {
+		transition: opacity 150ms ease-out 150ms;
+	}
+
+	&[aria-expanded='true'] {
+		justify-content: space-around;
+		.top {
+			transform: translateY(210%) rotate(-45deg);
+		}
+
+		.middle {
+			opacity: 0;
+		}
+
+		.bottom {
+			transform: translateY(-210%) rotate(45deg);
+		}
+	}
 }
