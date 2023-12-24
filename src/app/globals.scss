@@ -19,5 +19,5 @@ li {
 }
 
 .main {
-	margin-inline: 9rem;
+	margin-inline: clamp(1rem, 10vw, 10rem);
 }
