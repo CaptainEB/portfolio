@@ -1,10 +1,23 @@
+$medium: 850px;
+
+@mixin mq($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
 .exampleProjects {
 	margin-top: 3rem;
 
-	& h2 {
+	h2 {
 		font-size: 2rem;
 		margin-bottom: 1rem;
 		text-align: center;
+	}
+	@include mq($medium) {
+		h2 {
+			font-size: clamp(1.5rem, 5vw, 2rem);
+		}
 	}
 }
 
@@ -15,8 +28,8 @@
 	margin-top: 2rem;
 	gap: 2rem;
 
-	& img {
-		width: clamp(500px, 90%, 700px);
+	img {
+		width: clamp(18rem, 90%, 40rem);
 		height: 100%;
 		object-fit: cover;
 	}

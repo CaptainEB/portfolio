@@ -107,12 +107,6 @@ $medium: 850px;
 	}
 }
 
-.row2 {
-	@include mq($medium) {
-		transition-delay: 1s;
-	}
-}
-
 .navBtn {
 	z-index: 1000;
 	background-color: transparent;

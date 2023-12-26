@@ -1,12 +1,32 @@
+$medium: 850px;
+
+@mixin mq($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
 .container {
+	$medium-grid-square-size: clamp(3rem, 15vw, 20rem);
 	display: grid;
-	grid-template-columns: repeat(3, 7rem);
-	grid-template-rows: repeat(3, 7rem);
+	grid-template-columns: repeat(3, medium-grid-square-size);
+	grid-template-rows: repeat(3, medium-grid-square-size);
 	gap: 1rem;
 	place-items: center;
 	& * {
 		padding: 0.25em;
 		margin: 0;
+	}
+
+	@include mq($medium) {
+		img {
+			$medium-img-size: clamp(3rem, 15vw, 20rem);
+			width: $medium-img-size;
+			height: $medium-img-size;
+		}
+		.mernTextWrapper {
+			font-size: clamp(0.75rem, 3vw, 3rem);
+		}
 	}
 }
 

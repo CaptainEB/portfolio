@@ -55,7 +55,7 @@ export default function Nav() {
 				</ul>
 			</div>
 			<button className={styles.navBtn} onClick={showNav} ref={navbtn} aria-expanded="false">
-				<svg viewBox="0 0 100 100" width="50" height="50">
+				<svg viewBox="0 0 100 100" width="30" height="30">
 					<rect className={`${styles.top} ${styles.line}`} width="80" height="10" x={10} y={25} rx={5}></rect>
 					<rect className={`${styles.middle} ${styles.line}`} width="80" height="10" x={10} y={50} rx={5}></rect>
 					<rect className={`${styles.bottom} ${styles.line}`} width="80" height="10" x={10} y={75} rx={5}></rect>

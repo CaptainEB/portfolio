@@ -1,3 +1,11 @@
+$medium: 850px;
+
+@mixin mq($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
 .homeSkills {
 	font-size: 2rem;
 	display: flex;
@@ -12,6 +20,15 @@
 .barGraph {
 	flex: 2;
 	display: flex;
+	@include mq($medium) {
+		$medium-font-size: clamp(1rem, 3vw, 3rem);
+		.titles {
+			font-size: $medium-font-size;
+		}
+		.spans {
+			font-size: $medium-font-size;
+		}
+	}
 }
 
 .titles {
@@ -50,6 +67,17 @@
 		width: 82%;
 		height: 100%;
 	}
+	@include mq($medium) {
+		.devBar {
+			width: 86%;
+		}
+		.engineerBar {
+			width: 65%;
+		}
+		.gamerBar {
+			width: 72%;
+		}
+	}
 }
 
 .spans {
@@ -58,4 +86,5 @@
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 2rem;
+	padding-inline: 0.25em;
 }
