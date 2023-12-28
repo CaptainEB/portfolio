@@ -17,7 +17,13 @@ $medium: 850px;
 		padding: 0.25em;
 		margin: 0;
 	}
-
+	@media screen and (min-width: 851px) {
+		img {
+			$large-img-size: clamp(5rem, 10vw, 15rem);
+			width: $large-img-size;
+			height: $large-img-size;
+		}
+	}
 	@include mq($medium) {
 		img {
 			$medium-img-size: clamp(3rem, 15vw, 20rem);
@@ -37,7 +43,7 @@ $medium: 850px;
 }
 
 .mernTextWrapper {
-	font-size: 1.5rem;
+	font-size: clamp(1rem, 2vw, 3rem);
 	grid-column: 2;
 	grid-row: 2;
 	display: flex;

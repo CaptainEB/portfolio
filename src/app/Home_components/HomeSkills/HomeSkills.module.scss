@@ -7,7 +7,7 @@ $medium: 850px;
 }
 
 .homeSkills {
-	font-size: 2rem;
+	font-size: clamp(0.5rem, 2vw, 2rem);
 	display: flex;
 	margin-top: 3rem;
 	gap: 3rem;
@@ -15,20 +15,14 @@ $medium: 850px;
 	& > * {
 		flex: 1;
 	}
+	@include mq($medium) {
+		font-size: clamp(1rem, 3vw, 3rem);
+	}
 }
 
 .barGraph {
 	flex: 2;
 	display: flex;
-	@include mq($medium) {
-		$medium-font-size: clamp(1rem, 3vw, 3rem);
-		.titles {
-			font-size: $medium-font-size;
-		}
-		.spans {
-			font-size: $medium-font-size;
-		}
-	}
 }
 
 .titles {
@@ -44,30 +38,31 @@ $medium: 850px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 2rem;
+	gap: clamp(2rem, 12vw, 17rem);
 
 	& * {
 		border-radius: 1.25rem;
 		margin-inline: 1rem;
 	}
 
-	& .devBar {
+	.devBar {
 		background-color: #1162ff;
 		width: 96%;
 		height: 100%;
 	}
 
-	& .engineerBar {
+	.engineerBar {
 		background-color: #1162ff;
 		width: 75%;
 		height: 100%;
 	}
-	& .gamerBar {
+	.gamerBar {
 		background-color: #1162ff;
 		width: 82%;
 		height: 100%;
 	}
 	@include mq($medium) {
+		gap: 2rem;
 		.devBar {
 			width: 86%;
 		}
@@ -86,5 +81,5 @@ $medium: 850px;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 2rem;
-	padding-inline: 0.25em;
+	padding-inline: 0.5em;
 }
