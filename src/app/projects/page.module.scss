@@ -1,6 +1,6 @@
 .projects {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
-	margin-block: 3rem;
+	gap: clamp(3rem, 10vw, 15rem);
+	margin-block: 10rem;
 }

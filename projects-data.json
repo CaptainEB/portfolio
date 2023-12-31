@@ -15,6 +15,13 @@
 		"image": "/img/binge.png",
 		"tech": ["Handlebars.js", "Express.js", "MySQL"]
 	},
-	"project3": {},
+	"basketBistro": {
+		"title": "Basket Bistro",
+		"shortDescription": "Full Stack application built to simplify the process of preparing their shopping list based on the recipes they want to cook.",
+		"githubUrl": "https://github.com/tdavids215/BasketBistro",
+		"liveUrl": "https://damp-reef-56861-e834c836fd5d.herokuapp.com/",
+		"image": "/img/basket-bistro.png",
+		"tech": ["React", "GraphQL", "MongoDB"]
+	},
 	"project4": {}
 }
