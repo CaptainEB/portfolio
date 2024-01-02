@@ -7,7 +7,7 @@ $medium: 850px;
 }
 
 .exampleProjects {
-	margin-top: 3rem;
+	margin-top: clamp(2rem, 12vw, 13rem);
 
 	h2 {
 		font-size: 2rem;

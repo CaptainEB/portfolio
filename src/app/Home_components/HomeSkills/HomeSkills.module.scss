@@ -46,18 +46,21 @@ $medium: 850px;
 	}
 
 	.devBar {
-		background-color: #1162ff;
+		background: rgb(8, 0, 62);
+		background: linear-gradient(270deg, rgba(8, 0, 62, 1) 0%, rgba(21, 11, 91, 1) 35%, rgba(184, 179, 222, 0.5) 75%, rgba(255, 255, 255, 0) 100%);
 		width: 96%;
 		height: 100%;
 	}
 
 	.engineerBar {
-		background-color: #1162ff;
+		background: rgb(8, 0, 62);
+		background: linear-gradient(270deg, rgba(8, 0, 62, 1) 0%, rgba(21, 11, 91, 1) 35%, rgba(184, 179, 222, 0.5) 75%, rgba(255, 255, 255, 0) 100%);
 		width: 75%;
 		height: 100%;
 	}
 	.gamerBar {
-		background-color: #1162ff;
+		background: rgb(8, 0, 62);
+		background: linear-gradient(270deg, rgba(8, 0, 62, 1) 0%, rgba(21, 11, 91, 1) 35%, rgba(184, 179, 222, 0.5) 75%, rgba(255, 255, 255, 0) 100%);
 		width: 82%;
 		height: 100%;
 	}
