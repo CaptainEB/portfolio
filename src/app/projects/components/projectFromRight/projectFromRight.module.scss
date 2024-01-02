@@ -19,10 +19,23 @@ $medium: 992px;
 	justify-content: center;
 	align-items: center;
 	gap: 7rem;
+	padding-block: 2rem;
+	margin-block: 2rem;
+	&::after {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: -25%;
+		width: 150vw;
+		height: 100%;
+		background-color: rgba(134, 134, 134, 0.05);
+	}
 	.title {
 		font-size: 3rem;
 		transition: all 0.2s ease-in-out;
 		z-index: -1;
+		margin-bottom: clamp(1rem, 3vw, 3.5rem);
 	}
 
 	.description {

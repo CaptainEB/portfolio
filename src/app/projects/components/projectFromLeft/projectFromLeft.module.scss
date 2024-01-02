@@ -22,6 +22,7 @@ $medium: 992px;
 		font-size: clamp(2rem, 5vw, 5rem);
 		transition: all 0.35s ease-in-out;
 		z-index: -1;
+		margin-bottom: clamp(1rem, 3vw, 3.5rem);
 	}
 	.description {
 		display: flex;
