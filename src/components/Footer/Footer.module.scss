@@ -1,6 +1,6 @@
 .footer {
 	color: rgba(0, 0, 0, 0.5);
-	font-size: clamp(0.25rem, 1vw, 1rem);
+	font-size: clamp(0.5rem, 1vw, 1rem);
 	margin-top: 3rem;
 	position: relative;
 	display: flex;
@@ -27,7 +27,7 @@
 }
 
 .icon {
-	$medium-icon-size: clamp(0.5rem, 2vw, 3rem);
+	$medium-icon-size: clamp(1rem, 2vw, 3rem);
 	width: $medium-icon-size;
 	height: $medium-icon-size;
 	object-fit: cover;
