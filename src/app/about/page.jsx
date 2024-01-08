@@ -4,10 +4,6 @@ import styles from './page.module.scss';
 export default function page() {
 	return (
 		<section>
-			<p className={`${montserrat.className} ${styles.p} ${styles.intro}`}>
-				On this page, I aim to provide insights into my past professional experiences and meticulously detail the tech stack employed in constructing
-				this website.
-			</p>
 			<div className={styles.aboutMe}>
 				<h2 className={`${majorMono.className} ${styles.h2}`}>About me</h2>
 				<p className={`${montserrat.className} ${styles.p}`}>
