@@ -16,7 +16,8 @@ $medium: 850px;
 	.heroImage {
 		$heroImageSize: clamp(15rem, 40vw, 30rem);
 		flex: 1;
-		border-radius: 50%;
+		// border-radius: 50%;
+		mix-blend-mode: multiply;
 		width: $heroImageSize;
 		height: $heroImageSize;
 		margin-left: clamp(1rem, 7vw, 20rem);

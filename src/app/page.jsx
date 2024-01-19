@@ -6,7 +6,7 @@ import htmlIcon from 'public/icons/html.svg';
 import mongoIcon from 'public/icons/mongo.svg';
 import nextIcon from 'public/icons/nextjs.svg';
 import reactIcon from 'public/icons/react-icon.png';
-import heroImage from 'public/img/hero-image-1x1.jpg';
+import heroImage from 'public/img/hero-image-1x1.png';
 import Example_Projects from './Home_components/Example_Projects';
 import HomeSkills from './Home_components/HomeSkills';
 import styles from './page.module.scss';
