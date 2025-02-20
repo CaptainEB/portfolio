@@ -11,7 +11,7 @@
 		"title": "Binge",
 		"shortDescription": "This is a full stack application that allows users to add their favorite tv shows, movies and music to their profile. The data is saved in a mysql database and the user can update their entries.",
 		"githubUrl": "https://github.com/tdavids215/Binge",
-		"liveUrl": "https://floating-spire-24102-defdd03b0620.herokuapp.com/",
+		"liveUrl": "https://binge-production-d978.up.railway.app/",
 		"image": "/img/binge.png",
 		"tech": ["Handlebars.js", "Express.js", "MySQL"]
 	},
@@ -19,7 +19,7 @@
 		"title": "Basket Bistro",
 		"shortDescription": "Full Stack application built to simplify the process of preparing their shopping list based on the recipes they want to cook.",
 		"githubUrl": "https://github.com/tdavids215/BasketBistro",
-		"liveUrl": "https://damp-reef-56861-e834c836fd5d.herokuapp.com/",
+		"liveUrl": "https://basketbistro-production.up.railway.app/",
 		"image": "/img/basket-bistro.png",
 		"tech": ["React", "GraphQL", "MongoDB"]
 	},
