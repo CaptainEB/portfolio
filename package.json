@@ -9,20 +9,21 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^6.5.1",
-		"@fortawesome/free-brands-svg-icons": "^6.5.1",
-		"@fortawesome/free-regular-svg-icons": "^6.5.1",
-		"@fortawesome/free-solid-svg-icons": "^6.5.1",
-		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@vercel/analytics": "^1.1.1",
-		"@vercel/speed-insights": "^1.0.2",
-		"next": "14.0.3",
-		"react": "^18",
-		"react-dom": "^18",
-		"sass": "^1.69.5"
+		"@fortawesome/fontawesome-svg-core": "^6.7.2",
+		"@fortawesome/free-brands-svg-icons": "^6.7.2",
+		"@fortawesome/free-regular-svg-icons": "^6.7.2",
+		"@fortawesome/free-solid-svg-icons": "^6.7.2",
+		"@fortawesome/react-fontawesome": "^3.0.0",
+		"@vercel/analytics": "^2.0.1",
+		"@vercel/speed-insights": "^2.0.0",
+		"lucide-react": "^1.8.0",
+		"next": "15.5.15",
+		"react": "^19",
+		"react-dom": "^19",
+		"sass": "^1.99.0"
 	},
 	"devDependencies": {
-		"eslint": "^8",
-		"eslint-config-next": "14.0.3"
+		"eslint": "^9",
+		"eslint-config-next": "15.5.15"
 	}
 }

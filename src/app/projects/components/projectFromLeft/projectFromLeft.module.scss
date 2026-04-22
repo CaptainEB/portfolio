@@ -12,134 +12,180 @@ $medium: 992px;
 	}
 }
 
+// ─── CONTAINER ───────────────────────────────────────────────────────────────
 .project {
-	display: flex;
-	position: relative;
-	justify-content: center;
-	align-items: center;
-	gap: 7rem;
-	.title {
-		font-size: clamp(2rem, 5vw, 5rem);
-		transition: all 0.35s ease-in-out;
-		z-index: -1;
-		margin-bottom: clamp(1rem, 3vw, 3.5rem);
-	}
-	.description {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		font-size: 2rem;
-		max-width: 40%;
-		position: absolute;
-		transition: all 0.5s ease-in-out;
-		top: 5%;
-		left: 25%;
-		opacity: 0;
-	}
-
-	.tech {
-		display: flex;
-		gap: 1rem;
-		& > * {
-			font-size: 1.25rem;
-			border: 1px dotted black;
-			border-radius: 0.5rem;
-			padding: 0.5em;
-		}
-	}
-
-	.links {
-		font-size: 1.5rem;
-		display: flex;
-		gap: 2rem;
-		a {
-			padding: 0.25em 0.5em;
-		}
-	}
+	width: 100%;
 
 	@include large-mq($medium) {
-		.img {
-			transition: all 0.5s ease-in-out;
-			box-shadow: 15px 5px 20px 0px rgba(0, 0, 0, 0.25);
-			z-index: 2;
-			width: clamp(2rem, 47vw, 50rem);
-			height: auto;
-			aspect-ratio: 16/9;
-		}
-		.shortDescription {
-			font-size: clamp(1rem, 2vw, 2rem);
-		}
-		.tech {
-			span {
-				font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+		position: relative;
+		overflow: hidden;
+		aspect-ratio: 16 / 5;
+		min-height: 280px;
+
+		&:hover {
+			// Image slides right 100% of its own width (= 50% container)
+			.imgWrapper {
+				transform: translateX(100%);
 			}
-		}
-		.links {
-			font-size: clamp(1rem, 2vw, 1.75rem);
-		}
-		&:hover,
-		&:focus {
-			.img {
-				transform: translateX(85%);
-			}
-			.title {
-				transform: translateX(-50%);
-				color: white;
-			}
+			// Panel slides left 100% of its own width (= 50% container)
 			.description {
-				opacity: 1;
-				left: 5%;
-				max-width: 28vw;
+				transform: translateX(-100%);
 			}
+			.shortDescription,
+			.tech,
 			.links {
-				a {
-					&:hover,
-					&:focus {
-						background-color: rgba(136, 136, 136, 0.25);
-						border-radius: 0.5rem;
-					}
-				}
+				opacity: 1;
+				transition-delay: 0.2s;
 			}
 		}
 	}
 
 	@include small-mq($medium) {
+		display: flex;
 		flex-direction: column;
-		gap: clamp(2rem, 3vw, 5rem);
-		margin-bottom: 4rem;
-		.img {
-			width: clamp(16rem, 80vw, 70rem);
-			height: auto;
-			aspect-ratio: 16/9;
-			object-fit: fill;
-			-webkit-box-shadow: 0px 10px 27px -8px rgba(0, 0, 0, 0.5);
-			-moz-box-shadow: 0px 10px 27px -8px rgba(0, 0, 0, 0.5);
-			box-shadow: 0px 10px 27px -8px rgba(0, 0, 0, 0.5);
+		gap: clamp(1.25rem, 3vw, 2rem);
+		margin-bottom: clamp(3rem, 6vw, 5rem);
+	}
+}
+
+// ─── IMAGE: starts LEFT, 50% wide, always on top ─────────────────────────────
+.imgWrapper {
+	@include large-mq($medium) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		transition: transform 0.55s ease-in-out;
+		z-index: 2;
+	}
+
+	@include small-mq($medium) {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+	}
+}
+
+.img {
+	object-fit: cover;
+}
+
+// ─── INFO PANEL: starts RIGHT, 50% wide, slides LEFT on hover ────────────────
+.description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.875rem;
+
+	@include large-mq($medium) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		padding: clamp(1.75rem, 2.5vw, 3rem);
+		background: #f9f9f7;
+		z-index: 1;
+		transition: transform 0.55s ease-in-out;
+	}
+
+	@include small-mq($medium) {
+		gap: clamp(0.875rem, 2vw, 1.5rem);
+		align-items: flex-start;
+	}
+}
+
+.title {
+	font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	color: #1a1c1b;
+	line-height: 1.1;
+	text-align: center;
+
+	@include small-mq($medium) {
+		font-size: clamp(1.5rem, 5vw, 2.25rem);
+		text-align: left;
+	}
+}
+
+// Detail content hidden at rest on large screens, fades in on hover
+.shortDescription {
+	font-size: clamp(0.85rem, 1vw, 0.95rem);
+	line-height: 1.7;
+	color: #444748;
+	text-align: center;
+
+	@include large-mq($medium) {
+		opacity: 0;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	@include small-mq($medium) {
+		text-align: left;
+	}
+}
+
+.tech {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	justify-content: center;
+
+	span {
+		font-size: 0.72rem;
+		font-weight: 400;
+		color: #444748;
+		background: #ededed;
+		border-radius: 9999px;
+		padding: 0.3em 0.75em;
+		letter-spacing: 0.02em;
+	}
+
+	@include large-mq($medium) {
+		opacity: 0;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	@include small-mq($medium) {
+		justify-content: flex-start;
+	}
+}
+
+.links {
+	display: flex;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	a {
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #1a1c1b;
+		border: 1px solid currentColor;
+		border-radius: 0.25rem;
+		padding: 0.5em 1.25em;
+		transition:
+			background-color 200ms ease,
+			color 200ms ease;
+
+		&:hover {
+			background-color: #1a1c1b;
+			color: #ffffff;
 		}
-		.description {
-			opacity: 1;
-			position: static;
-			gap: clamp(1.5rem, 3vw, 4rem);
-		}
-		.description {
-			max-width: 100%;
-		}
-		.title {
-			font-size: clamp(1.75rem, 5vw, 3rem);
-		}
-		.shortDescription {
-			font-size: clamp(1rem, 5vw, 2rem);
-		}
-		.links {
-			justify-content: space-evenly;
-			font-size: clamp(1rem, 5vw, 1.5rem);
-			text-decoration: underline;
-		}
-		.tech {
-			justify-content: space-evenly;
-			span {
-				font-size: clamp(0.5rem, 4vw, 1.5rem);
-			}
-		}
+	}
+
+	@include large-mq($medium) {
+		opacity: 0;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	@include small-mq($medium) {
+		justify-content: flex-start;
 	}
 }

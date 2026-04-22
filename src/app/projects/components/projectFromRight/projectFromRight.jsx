@@ -1,4 +1,4 @@
-import { majorMono, montserrat } from '@/components/Fonts';
+import { manrope, notoSerif } from '@/components/Fonts';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './projectFromRight.module.scss';
@@ -6,18 +6,20 @@ import styles from './projectFromRight.module.scss';
 export default function projectFromRight({ title, shortDescription, githubUrl, liveUrl, image, tech }) {
 	return (
 		<div className={styles.project}>
-			<Image className={styles.img} src={image} alt="project picture" width={600} height={325} />
-			<h2 className={`${styles.title} ${majorMono.className}`}>{title}</h2>
-			<div className={`${styles.description} ${montserrat.className}`}>
+			<div className={styles.imgWrapper}>
+				<Image className={styles.img} src={image} alt="project picture" fill />
+			</div>
+			<div className={`${styles.description} ${manrope.className}`}>
+				<h2 className={`${styles.title} ${notoSerif.className}`}>{title}</h2>
 				<p className={styles.shortDescription}>{shortDescription}</p>
 				<div className={styles.tech}>
-					{tech.map((tech, index) => (
-						<span key={index}>{tech}</span>
+					{tech.map((t, index) => (
+						<span key={index}>{t}</span>
 					))}
 				</div>
 				<div className={styles.links}>
-					<Link href={githubUrl}>Gihub Link</Link>
-					<Link href={liveUrl}>Live Link</Link>
+					<Link href={githubUrl}>Github</Link>
+					<Link href={liveUrl}>Live</Link>
 				</div>
 			</div>
 		</div>

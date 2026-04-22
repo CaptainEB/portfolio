@@ -10,16 +10,16 @@ import styles from './Mern.module.scss';
 
 export default function Mern() {
 	const wrapperEl = useRef(null);
-	let rotationalForce = 0;
+	const rotationalForce = useRef(0);
 	const speed = 7;
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			rotationalForce++;
+			rotationalForce.current++;
 			if (wrapperEl.current) {
-				wrapperEl.current.style.transform = `rotate(${rotationalForce / speed}deg)`;
+				wrapperEl.current.style.transform = `rotate(${rotationalForce.current / speed}deg)`;
 				Array.from(wrapperEl.current.children).forEach((child) => {
-					child.style.transform = `rotate(${(rotationalForce / speed) * -1}deg)`;
+					child.style.transform = `rotate(${(rotationalForce.current / speed) * -1}deg)`;
 				});
 			}
 		}, 20);

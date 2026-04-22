@@ -1,4 +1,4 @@
-import { majorMono } from '@/components/Fonts';
+import { manrope, notoSerif } from '@/components/Fonts';
 import Image from 'next/image';
 
 // Icons
@@ -22,26 +22,26 @@ export default function page() {
 	return (
 		<section>
 			<section className={styles.barGraph}>
-				<div className={styles.titles}>
-					<h3 className={majorMono.className}>Developer</h3>
-					<h3 className={majorMono.className}>Engineer</h3>
-					<h3 className={majorMono.className}>Guitar Player</h3>
-				</div>
-				<div className={styles.bars}>
+				<div className={styles.barRow}>
+					<h3 className={`${manrope.className} ${styles.barLabel}`}>Developer</h3>
 					<div className={styles.devBar}></div>
-					<div className={styles.engineerBar}></div>
-					<div className={styles.gamerBar}></div>
+					<span className={`${manrope.className} ${styles.barValue}`}>96</span>
 				</div>
-				<div className={styles.spans}>
-					<span className={majorMono.className}>96</span>
-					<span className={majorMono.className}>75</span>
-					<span className={majorMono.className}>60</span>
+				<div className={styles.barRow}>
+					<h3 className={`${manrope.className} ${styles.barLabel}`}>Engineer</h3>
+					<div className={styles.engineerBar}></div>
+					<span className={`${manrope.className} ${styles.barValue}`}>75</span>
+				</div>
+				<div className={styles.barRow}>
+					<h3 className={`${manrope.className} ${styles.barLabel}`}>Guitar Player</h3>
+					<div className={styles.gamerBar}></div>
+					<span className={`${manrope.className} ${styles.barValue}`}>60</span>
 				</div>
 			</section>
 			<div className={styles.skillsSection}>
 				<section>
-					<h2 className={majorMono.className}>Front end</h2>
-					<p>
+					<h2 className={`${notoSerif.className} ${styles.sectionH2}`}>Front end</h2>
+					<p className={`${manrope.className} ${styles.sectionP}`}>
 						As a dedicated and skilled front-end developer, I bring a wealth of experience and expertise in crafting engaging and user-friendly
 						interfaces. Proficient in a diverse array of front-end technologies, I excel in transforming design concepts into seamless and interactive
 						web applications.
@@ -57,8 +57,8 @@ export default function page() {
 					</div>
 				</section>
 				<section>
-					<h2 className={majorMono.className}>Back end</h2>
-					<p>
+					<h2 className={`${notoSerif.className} ${styles.sectionH2}`}>Back end</h2>
+					<p className={`${manrope.className} ${styles.sectionP}`}>
 						As an adept backend developer, I can utilize powerful technologies such as Node.js, Express, and Next.js. Leveraging the robust
 						capabilities of Node.js, I create efficient and scalable server-side solutions.
 					</p>
@@ -69,8 +69,8 @@ export default function page() {
 					</div>
 				</section>
 				<section>
-					<h2 className={majorMono.className}>Database</h2>
-					<p>
+					<h2 className={`${notoSerif.className} ${styles.sectionH2}`}>Database</h2>
+					<p className={`${manrope.className} ${styles.sectionP}`}>
 						As a proficient database developer, I command a strong understanding of both SQL and NoSQL databases, specializing in MySQL and MongoDB.
 					</p>
 					<div className={styles.Icons}>

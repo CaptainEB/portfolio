@@ -1,3 +1,4 @@
+import { londrina, majorMono, manrope, montserrat, notoSerif } from '@/components/Fonts';
 import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import { Analytics } from '@vercel/analytics/react';
@@ -14,8 +15,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body className={inter.className}>
+		<html
+			lang="en"
+			suppressHydrationWarning
+			className={`${londrina.variable} ${majorMono.variable} ${montserrat.variable} ${notoSerif.variable} ${manrope.variable}`}
+		>
+			<body className={inter.className} suppressHydrationWarning>
 				<Nav />
 				<main className="main">{children}</main>
 				<Footer />
