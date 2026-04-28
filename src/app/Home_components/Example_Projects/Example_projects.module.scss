@@ -31,7 +31,7 @@ $small: 480px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: clamp(2rem, 4vw, 4rem);
-	align-items: center;
+	align-items: stretch;
 
 	@include mq($medium) {
 		grid-template-columns: 1fr;
@@ -55,14 +55,25 @@ $small: 480px;
 	}
 }
 
+.projectImage {
+	display: flex;
+}
+
 .imgWrapper {
 	position: relative;
-	aspect-ratio: 16 / 9;
+	flex: 1;
+	min-height: clamp(180px, 22vw, 320px);
 	border-radius: 0.375rem;
 	overflow: hidden;
 	box-shadow:
 		0 8px 60px rgba(0, 0, 0, 0.07),
 		0 2px 20px rgba(0, 0, 0, 0.04);
+
+	@include mq($medium) {
+		flex: none;
+		aspect-ratio: 16 / 9;
+		width: 100%;
+	}
 }
 
 .img {
