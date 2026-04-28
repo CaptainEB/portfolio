@@ -5,7 +5,8 @@
 		"githubUrl": "https://github.com/CaptainEB/Taco-Tap",
 		"liveUrl": "https://captaineb.github.io/Taco-Tap/",
 		"image": "/img/taco-tap.png",
-		"tech": ["jQuery", "Google Maps API", "tailwind.css"]
+		"tech": ["jQuery", "Google Maps API", "tailwind.css"],
+		"category": "personal"
 	},
 	"binge": {
 		"title": "Binge",
@@ -13,7 +14,8 @@
 		"githubUrl": "https://github.com/tdavids215/Binge",
 		"liveUrl": "https://binge-production-d978.up.railway.app/",
 		"image": "/img/binge.png",
-		"tech": ["Handlebars.js", "Express.js", "MySQL"]
+		"tech": ["Handlebars.js", "Express.js", "MySQL"],
+		"category": "personal"
 	},
 	"basketBistro": {
 		"title": "Basket Bistro",
@@ -21,7 +23,16 @@
 		"githubUrl": "https://github.com/tdavids215/BasketBistro",
 		"liveUrl": "https://basketbistro-production.up.railway.app/",
 		"image": "/img/basket-bistro.png",
-		"tech": ["React", "GraphQL", "MongoDB"]
+		"tech": ["React", "GraphQL", "MongoDB"],
+		"category": "personal"
 	},
-	"project4": {}
+	"mythicalAtlas": {
+		"title": "Mythical Atlas",
+		"shortDescription": "A campaign management tool built for tabletop RPG game masters. Organize shops, quests, player details, NPCs, items, and everything else your campaign needs in one place.",
+		"githubUrl": null,
+		"liveUrl": "https://mythicalatlas.com",
+		"image": "/img/mythical_atlas_card.jpg",
+		"tech": ["Next.js", "MongoDB", "Prisma", "Tailwind CSS", "shadcn/ui"],
+		"category": "business"
+	}
 }

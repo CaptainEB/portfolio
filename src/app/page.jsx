@@ -1,6 +1,7 @@
 import { manrope, notoSerif } from '@/components/Fonts';
 import Image from 'next/image';
 import heroImage from 'public/img/circleHeroImage.png';
+import CompanySection from './Home_components/CompanySection';
 import Example_Projects from './Home_components/Example_Projects';
 import HomeSkills from './Home_components/HomeSkills';
 import styles from './page.module.scss';
@@ -20,6 +21,7 @@ export default function Home() {
 			</section>
 			<HomeSkills />
 			<Example_Projects />
+			<CompanySection />
 		</section>
 	);
 }

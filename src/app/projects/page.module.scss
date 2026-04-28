@@ -1,8 +1,122 @@
-.projects {
+$medium: 850px;
+$small: 480px;
+
+@mixin mq($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
+.pageWrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+// ─── PERSONAL SECTION ────────────────────────────────────────────────────────
+
+.personalSection {
+	padding-block: clamp(3rem, 6vw, 5.5rem);
+}
+
+.sectionHeader {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.sectionLabel {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: #747878;
+}
+
+.sectionTitle {
+	font-size: clamp(2rem, 4vw, 4rem);
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	color: #1a1c1b;
+	line-height: 1.05;
+}
+
+.sectionDesc {
+	font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+	color: #444748;
+	line-height: 1.7;
+	max-width: 48ch;
+	margin-top: 0.35rem;
+}
+
+.projectsList {
 	display: flex;
 	flex-direction: column;
 	gap: clamp(1.5rem, 3vw, 2.5rem);
-	margin-block: clamp(3rem, 6vw, 6rem);
-	padding: clamp(1.5rem, 3vw, 3rem);
-	border-radius: 0.5rem;
 }
+
+// ─── BUSINESS SECTION ────────────────────────────────────────────────────────
+
+.businessSection {
+	padding-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+
+.businessBand {
+	background: #1a1c1b;
+	// Break out of .main padding to fill container edge-to-edge
+	margin-inline: calc(-1 * clamp(1.25rem, 5vw, 3rem));
+	padding-inline: clamp(1.25rem, 5vw, 3rem);
+	padding-block: clamp(2rem, 4vw, 3.25rem);
+	margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.businessBandInner {
+	display: flex;
+	align-items: center;
+	gap: clamp(1.25rem, 3vw, 2rem);
+
+	@include mq($medium) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.25rem;
+	}
+}
+
+.businessLogo {
+	width: clamp(2.5rem, 4vw, 3.5rem);
+	height: auto;
+	object-fit: contain;
+	flex-shrink: 0;
+	mix-blend-mode: screen;
+}
+
+.businessBandText {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.businessLabel {
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: rgba(249, 249, 247, 0.5);
+}
+
+.businessName {
+	font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	color: #f9f9f7;
+	line-height: 1.1;
+}
+
+.businessTagline {
+	font-size: clamp(0.85rem, 1vw, 0.95rem);
+	color: rgba(249, 249, 247, 0.55);
+	line-height: 1.65;
+	max-width: 52ch;
+	margin-top: 0.25rem;
+}
+

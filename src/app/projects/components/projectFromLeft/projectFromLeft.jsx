@@ -18,7 +18,7 @@ export default function projectFromLeft({ title, shortDescription, githubUrl, li
 					))}
 				</div>
 				<div className={styles.links}>
-					<Link href={githubUrl}>Github</Link>
+					{githubUrl && <Link href={githubUrl}>Github</Link>}
 					<Link href={liveUrl}>Live</Link>
 				</div>
 			</div>
